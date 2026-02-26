@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:8001',
+    baseURL: import.meta.env.PROD ? '' : 'http://localhost:8001',
     timeout: 300000, // Matching the backend timeout for Gemini
 });
 
