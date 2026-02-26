@@ -1,0 +1,14 @@
+{
+  "name": "NSCLC Post-Osimertinib",
+  "note": "58-year-old female with stage IIIB non-small cell lung cancer, EGFR exon 19 deletion confirmed on tissue biopsy. Progressed on osimertinib after 14 months. Prior platinum-based chemotherapy (carboplatin + pemetrexed, 4 cycles). ECOG performance status 1. PD-L1 TPS 45%, TMB 8 mut/Mb, TP53 co-mutation. Mild hepatic impairment (Child-Pugh A). No active autoimmune disease. No prior immunotherapy. eGFR 72 mL/min. Age 58.",
+  "expected_profile": {
+    "diagnosis": "stage IIIB non-small cell lung cancer",
+    "biomarkers": ["EGFR exon 19 deletion", "PD-L1 TPS 45%", "TMB 8 mut/Mb", "TP53"],
+    "ecog": "1",
+    "prior_treatments": ["osimertinib", "carboplatin", "pemetrexed"],
+    "age": "58",
+    "sex": "female"
+  },
+  "expected_search_condition": "non-small cell lung cancer",
+  "notes": "Post-third-gen EGFR TKI progression. Key question: eligibility for 4th-line EGFR-directed therapy or immunotherapy trials."
+}

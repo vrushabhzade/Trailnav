@@ -1,0 +1,18 @@
+{
+    "name": "CLL Post-BTKi",
+    "note": "71-year-old male with chronic lymphocytic leukemia (CLL), del(17p) confirmed by FISH. Progressed on ibrutinib after 18 months of therapy. No prior venetoclax. ECOG PS 1. Creatinine clearance 58 mL/min. Platelet count 95,000. No active autoimmune disease. No transformation to Richter syndrome confirmed on biopsy.",
+    "expected_profile": {
+        "diagnosis": "chronic lymphocytic leukemia (CLL)",
+        "biomarkers": [
+            "del(17p)"
+        ],
+        "ecog": "1",
+        "prior_treatments": [
+            "ibrutinib"
+        ],
+        "age": "71",
+        "sex": "male"
+    },
+    "expected_search_condition": "chronic lymphocytic leukemia",
+    "notes": "High-risk CLL post-BTKi. Key candidates: venetoclax-based trials, PI3K inhibitors, bispecific antibody trials."
+}

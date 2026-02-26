@@ -1,0 +1,21 @@
+{
+    "name": "Triple-Negative Breast Cancer",
+    "note": "42-year-old female with triple-negative breast cancer (TNBC), stage IV metastatic. PD-L1 CPS 15, BRCA1/2 germline wild-type. Previously treated with anthracycline and taxane-based regimen (AC-T). No prior immunotherapy. ECOG PS 0. Normal organ function: eGFR 95, ALT 28, bilirubin 0.6. Liver metastases confirmed on CT scan. Brain MRI negative.",
+    "expected_profile": {
+        "diagnosis": "triple-negative breast cancer, stage IV metastatic",
+        "biomarkers": [
+            "PD-L1 CPS 15",
+            "BRCA1/2 wild-type"
+        ],
+        "ecog": "0",
+        "prior_treatments": [
+            "anthracycline",
+            "taxane",
+            "AC-T"
+        ],
+        "age": "42",
+        "sex": "female"
+    },
+    "expected_search_condition": "triple-negative breast cancer",
+    "notes": "PD-L1 positive TNBC. Candidates: immunotherapy combinations, ADC trials, PARP inhibitor trials despite BRCA WT."
+}
