@@ -13,8 +13,7 @@ python-multipart>=0.0.9
 httpx>=0.27.0
 aiohttp>=3.9.0
 
-# ── Frontend ──────────────────────────────────────────────────────────────────
-gradio>=4.20.0
+# ── Frontend (Legacy - Removed to save space on Vercel) ───────────────────────
 
 # ── FHIR ─────────────────────────────────────────────────────────────────────
 fhir.resources>=7.0.0
