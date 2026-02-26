@@ -1,38 +1,15 @@
 {
     "version": 2,
-    "builds": [
+    "buildCommand": "cd web && npm install && npm run build",
+    "outputDirectory": "web/dist",
+    "rewrites": [
         {
-            "src": "api/main.py",
-            "use": "@vercel/python"
+            "source": "/api/(.*)",
+            "destination": "/api/main.py"
         },
         {
-            "src": "web/package.json",
-            "use": "@vercel/static-build",
-            "config": {
-                "distDir": "dist"
-            }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/api/(.*)",
-            "dest": "api/main.py"
-        },
-        {
-            "src": "/docs",
-            "dest": "api/main.py"
-        },
-        {
-            "src": "/openapi.json",
-            "dest": "api/main.py"
-        },
-        {
-            "src": "/health",
-            "dest": "api/main.py"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "web/dist/$1"
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ]
 }
