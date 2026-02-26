@@ -13,7 +13,7 @@ load_dotenv()
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from api.routes import match, trials, export, cvd
+from api.routes import match, trials, export
 
 app = FastAPI(
     title="TrialNav API",
@@ -37,7 +37,7 @@ app.add_middleware(
 app.include_router(match.router, prefix="/api")
 app.include_router(trials.router, prefix="/api")
 app.include_router(export.router, prefix="/api")
-app.include_router(cvd.router, prefix="/api")
+
 
 
 @app.get("/health", tags=["Health"])
