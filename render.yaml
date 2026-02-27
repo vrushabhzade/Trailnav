@@ -3,7 +3,7 @@ services:
   - type: web
     name: trialnav-api
     # Render's native Python environment
-    runtime: python
+    env: python
     buildCommand: "pip install -r requirements.txt"
     startCommand: "uvicorn api.main:app --host 0.0.0.0 --port $PORT"
     envVars:
@@ -15,7 +15,7 @@ services:
   # 2. React Vite Frontend (Static Site)
   - type: web
     name: trialnav-web
-    runtime: static
+    env: static
     buildCommand: "npm install && npm run build"
     staticPublishPath: dist
     pullRequestPreviewsEnabled: false
