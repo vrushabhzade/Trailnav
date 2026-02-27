@@ -1,0 +1,33 @@
+services:
+  # 1. FastAPI Backend (Web Service)
+  - type: web
+    name: trialnav-api
+    # Render's native Python environment
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn api.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: GEMINI_API_KEY
+        sync: false # Set this securely in the Render Dashboard
+
+  # 2. React Vite Frontend (Static Site)
+  - type: web
+    name: trialnav-web
+    # Render's static site environment provides Node.js
+    env: static
+    buildCommand: "npm install && npm run build"
+    publishPath: dist
+    pullRequestPreviewsEnabled: false
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: trialnav-api
+          envVarKey: RENDER_EXTERNAL_URL
+    routes:
+      # SPAs need to direct all unmatched routes to index.html
+      - type: rewrite
+        source: /*
+        destination: /index.html
