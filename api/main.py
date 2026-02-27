@@ -33,10 +33,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from fastapi.responses import RedirectResponse
 # Register routers
 app.include_router(match.router, prefix="/api")
 app.include_router(trials.router, prefix="/api")
 app.include_router(export.router, prefix="/api")
+
+@app.get("/", include_in_schema=False)
+async def root():
+    return RedirectResponse(url="/docs")
 
 
 
