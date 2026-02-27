@@ -15,10 +15,10 @@ services:
   # 2. React Vite Frontend (Static Site)
   - type: web
     name: trialnav-web
-    # Render's static site environment provides Node.js
-    env: static
+    # Render's node environment provides Node.js
+    env: node
     buildCommand: "npm install && npm run build"
-    publishPath: dist
+    startCommand: "npm run preview"
     pullRequestPreviewsEnabled: false
     envVars:
       - key: VITE_API_URL
