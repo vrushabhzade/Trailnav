@@ -2,7 +2,7 @@
 # No GPU needed. Uses Google AI Studio (Gemini 2.0 Flash) + Ollama fallback.
 
 # ── Google AI (free Gemini API) ──────────────────────────────────────────────
-google-generativeai>=0.7.0
+google-genai>=0.1.0
 
 # ── Web / API ─────────────────────────────────────────────────────────────────
 fastapi>=0.110.0

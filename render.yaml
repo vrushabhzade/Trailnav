@@ -13,7 +13,7 @@ services:
         sync: false # Set this securely in the Render Dashboard
 
   # 2. React Vite Frontend (Static Site)
-  - type: web
+  - type: static
     name: trialnav-web
     env: static
     buildCommand: "npm install && npm run build"
